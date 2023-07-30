@@ -1,0 +1,13 @@
+name: Test GH Action
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Get code from the repository
+      - name: Get code  
+        uses: actions/checkout@v3
+      - name: Install Node ver 18
+        uses: actions/setup-node@v3
+          with:
+            node-version: 18
